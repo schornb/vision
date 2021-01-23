@@ -1,19 +1,11 @@
 body {
-  background-color: purple;
+  background-color: gray;
   color: white;
   font-family: Helvetica;
 }
 
-#boxone {
-  background-color: black;
-  color: white;
-  width: 340px;
-  height: 440px;
-  padding: 30px;
-  float: left;
-}
-#boxtwo {
-  background-color: white;
+#menu_bar {
+  background-color: red;
   color: black;
   width: 340px;
   height: 440px;
