@@ -7,8 +7,8 @@ body {
 #menu_bar {
   background-color: red;
   color: black;
-  width: 340px;
-  height: 440px;
-  padding: 30px;
-  float: left;
+  width: 1000px;
+  height: 30px;
+  padding: 10px;
+  float: center;
 }
