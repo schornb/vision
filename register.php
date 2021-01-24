@@ -56,9 +56,6 @@ h3 {text-align: center;}
       <a class="nav-link" href="index.html"><b>Home</b></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="groups.html"><b>Groups</b></a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="register.php"><b>Account Registration</b></a>
     </li>
   </ul>
