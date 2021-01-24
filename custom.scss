@@ -8,13 +8,13 @@ $body-color: #000;
 
 // Nav-tabs overrides
 .nav-tabs {
-  border-bottom: 2px solid #dee2e6 !important;
+  border-bottom: 0px solid #dee2e6 !important;
 }
 .nav-tabs .nav-link {
   margin-bottom: -1px;
-  border: 2px solid transparent !important;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border: 0px solid transparent !important;
+  border-top-left-radius: 0rem !important;
+  border-top-right-radius: 0rem !important;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
 	background-color: #888 !important;
