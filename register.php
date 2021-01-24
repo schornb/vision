@@ -79,7 +79,3 @@ h3 {text-align: center;}
   </div>
   </form>
 </body>
-
-<?php
-require_once 'includes/footer.php';
-?>

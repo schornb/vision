@@ -1,7 +1,3 @@
-<?php
-require_once 'includes/header.php';
-?>
-
 <div>
     <h1>Log in</h1>
     <p> No account? <a href="register.php">Register here!</a></p>
@@ -12,7 +8,3 @@ require_once 'includes/header.php';
         <button type="submit" name="submit">LOGIN</button>
     </form>
 </div>
-<?php
-require_once 'includes/footer.php';
-?>
-
