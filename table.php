@@ -48,25 +48,31 @@
 				<td>brad_pitt@brown.edu</td>
 			</tr>
 		</tbody>
-		<?php
-		$conn = mysql_connect("localhost", "root", "", "company");
-		if ($conn->connect_error) {
-			die("Connection failed:". $conn->connect_error);
+	<?php
+		require 'includes/database.php';
+
+		$result = mysqli_query($conn, "SELECT username, email, phoneNumber, classes FROM users");
+		$all_property = array();  //declare an array for saving property
+
+		//showing property
+		echo '<table class="data-table">
+        <tr class="data-heading">';  //initialize table tag
+		while ($property = mysqli_fetch_field($result)) {
+    	echo '<td>' . $property->name . '</td>';  //get field name for header
+    	array_push($all_property, $property->name);  //save those to array
 		}
-		$sql = "SELECT Name, Courses, Email from profiles";
-		$result = $conn->query($sql);
-		if ($result-> num_rows > 0) {
-			while($row = $result->fetch_assoc()) {
-				echo "<tr><td>". $row["#"] ."</td><td>". $row["1"]. "</td><td>".
-				$row["2"] ."</td><td>". $row["3"] ."</td></tr>";
-			}
-			echo "</table>";
-		}
-		else{
-			echo "0 result";
-		}
-		$conn->close();
-		?>
+		echo '</tr>'; //end tr tag
+
+		//showing all data
+		while ($row = mysqli_fetch_array($result)) {
+    	echo "<tr>";
+    	foreach ($all_property as $item) {
+        	echo '<td>' . $row[$item] . '</td>'; //get items using property value
+    }
+    echo '</tr>';
+	}
+echo "</table>";
+?>
 </table>
 	<script>
 		function myFunction() {

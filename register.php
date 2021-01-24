@@ -53,13 +53,13 @@ h3 {text-align: center;}
 <body>
   <ul class="nav nav-tabs nav-justified">
     <li class="nav-item">
-      <a class="nav-link" href="index.html"><b>Home</b></a>
+      <a class="nav-link" href="table.php"><b>Home</b></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="groups.html"><b>Groups</b></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="account-creation.html"><b>Account Creation</b></a>
+      <a class="nav-link active" aria-current="page" href="register.php"><b>Account Creation</b></a>
     </li>
   </ul>
   <h1>Profile</h1>
