@@ -13,12 +13,7 @@
 			<a class="nav-link" href="groups.html"><b>Groups</b></a>
 		</li>
 		<li class="nav-item">
-<<<<<<< HEAD:index.html
-			<a class="nav-link" href="register.php"><b>Account Creation</b></a>
-=======
-			<a class="nav-link" href="account-creation.html"><b>Account Creation</b></a>
->>>>>>> 86084c2152cd03d4b07b486451f43caa292fc872:table.php
-		</li>
+			<a class="nav-link" href="register.php"><b>Account Creation</b></a>		</li>
 	</ul>
 	<h1>Home</h1>
 

@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 
                     mysqli_stmt_bind_param($stmt, "sssss", $username, $hashedPass, $phoneNum, $email, $classes);
                     mysqli_stmt_execute($stmt);
-                        header("Location: ../index.html");
+                        header("Location: ../table.php");
                         exit();
                 }
             }
