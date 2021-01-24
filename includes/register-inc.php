@@ -7,6 +7,9 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPass = $_POST['confirmPassword'];
+    $phoneNum = $_POST['phoneNumber'];
+    $email = $_POST['email'];
+    $classes = $_POST['classes'];
 
     if (empty($username) || empty($password) || empty($confirmPass)) {
         header("Location: ../register.php?error=emptyfields&username=".$username);
@@ -35,7 +38,7 @@ if (isset($_POST['submit'])) {
                 header("Location: ../register.php?error=usernametaken");
                 exit();
             } else {
-                $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+                $sql = "INSERT INTO users (username, password, phoneNumber, email, classes) VALUES (?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../register.php?error=sqlerror");
@@ -43,9 +46,9 @@ if (isset($_POST['submit'])) {
                 } else {
                     $hashedPass = password_hash($password, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPass);
+                    mysqli_stmt_bind_param($stmt, "sssss", $username, $hashedPass, $phoneNum, $email, $classes);
                     mysqli_stmt_execute($stmt);
-                        header("Location: ../index.html");
+                        header("Location: ../table.php");
                         exit();
                 }
             }
