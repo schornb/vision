@@ -72,6 +72,9 @@ h3 {text-align: center;}
     <input type="text" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">
     <input type="password" name="confirmPassword" placeholder="Confirm password">
+    <input type="text" name="phoneNumber" placeholder="1234567890">
+    <input type="text" name="email" placeholder="john_doe@brown.edu">
+    <input type="text" name="classes" placeholder="CSCI 0190">
     <button type="submit" name="submit">REGISTRER</button>
   </div>
   </form>
