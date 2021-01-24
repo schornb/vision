@@ -5,8 +5,7 @@
 	<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+body {font-family: Arial, Helvetica, sans-serif; margin-top: 20px;}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -31,23 +30,17 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
 .container {
   padding: 16px;
 }
 
-span.psw {
+/* span.psw {
   float: right;
   padding-top: 16px;
-}
+} */
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+/*@media screen and (max-width: 300px) {
   span.psw {
      display: block;
      float: none;
@@ -55,12 +48,15 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
-}
+}*/
+
+h3 {text-align: center;}
+
 </style>
 </head>
 <body>
 
-<h2>Create Account</h2>
+<h3>Create Account</h3>
 
 <form action="/action_page.php" method="post">
 
@@ -70,6 +66,13 @@ span.psw {
 
     <label for="School"><b>School</b></label>
     <input type="text" placeholder="Enter school" name="School" required>
+
+    <label for="Email"><b>Email</b></label>
+    <input type="text" placeholder="Enter email" name="Email" required>
+
+    <label for="phone"><b>Phone number:<b></label><br>
+    <input type="tel" id="phone" name="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <span style="font-size:0.5em">optional</span><br>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
