@@ -24,12 +24,16 @@ class SQLiteCreateTable {
      * create tables
      */
     public function createTables() {
-        $commands = ['CREATE TABLE IF NOT EXISTS profile (
+        $commands = ['CREATE TABLE IF NOT EXISTS projects (
+                        project_id   INTEGER PRIMARY KEY,
+                        project_name TEXT NOT NULL
+                      )',
+            'CREATE TABLE IF NOT EXISTS profile (
                         user_id   INTEGER PRIMARY KEY,
                         Name TEXT NOT NULL,
                         School TEXT NOT NULL,
                         Email TEXT NOT NULL,
-                        phone TEXT NOT NULL,
+                        phone TEXT NOT NULL
                       )'];
         // execute the sql commands to create new tables
         foreach ($commands as $command) {
