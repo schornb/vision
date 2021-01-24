@@ -17,35 +17,58 @@
 		</li>
 	</ul>
 	<h1>Home</h1>
-	<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Courses</th>
-      <th scope="col">Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>John Smith</td>
-      <td>APMA 1650, ECON 0110</td>
-      <td>john_smith@brown.edu</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jane Doe</td>
-      <td>ECON 0110</td>
-      <td>jane_doe@brown.edu</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Brad Pitt</td>
-      <td>CS 0190</td>
-      <td>brad_pitt@brown.edu</td>
-    </tr>
-  </tbody>
-</table>
+
+	<input class="searchBar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a course (e.g., ECON 0110)..." title="Type in a name">
+
+	<table id="userData" class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Courses</th>
+				<th scope="col">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>John Smith</td>
+				<td>APMA 1650, ECON 0110</td>
+				<td>john_smith@brown.edu</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jane Doe</td>
+				<td>ECON 0110</td>
+				<td>jane_doe@brown.edu</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Brad Pitt</td>
+				<td>CS 0190</td>
+				<td>brad_pitt@brown.edu</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		function myFunction() {
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("userData");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[1];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} else {
+						tr[i].style.display = "none";
+					}
+				}       
+			}
+		}
+	</script>
 </body>
 </html>
