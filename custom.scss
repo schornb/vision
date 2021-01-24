@@ -1,14 +1,30 @@
 // Custom.scss
 
 // Variable overrides
-$body-bg: #000030;
-$body-color: #fff;
+$body-bg: #fff;
+$body-color: #000;
 //$primary: #ff0000;
 //$secondary: #ff0000;
 
+// Nav-tabs overrides
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6 !important;
+}
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 2px solid transparent !important;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+	background-color: #888 !important;
+  border-color: #e9ecef #e9ecef #dee2e6;
+}
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #ff0000 !important;
+  background-color: #aaa !important;
+  border-color: #000 #000 #fff !important;
 }
 
 // Bootstrap and its default variables
