@@ -6,7 +6,7 @@ $(document).ready(function() {
     var phone = $("phone").val();
     var password = $("#psw").val();
     var cpassword = $("#cpassword").val();
-    if (name == '' || email == '' || password == '' || cpassword == '') {
+    if (name == '' || school = '' || email == '' || phone = '' || password == '' || cpassword == '') {
       alert("Please fill all fields...!!!!!!");
     } else if ((password.length) < 8) {
       alert("Password should atleast 8 character in length...!!!!!!");
