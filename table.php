@@ -7,35 +7,22 @@
 <body>
 	<ul class="nav nav-tabs nav-justified">
 		<li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
+			<a class="nav-link active" aria-current="page" href="table.php"><b>Home</b></a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="groups.html"><b>Groups</b></a>
 		</li>
 		<li class="nav-item">
+<<<<<<< HEAD:index.html
 			<a class="nav-link" href="register.php"><b>Account Creation</b></a>
+=======
+			<a class="nav-link" href="account-creation.html"><b>Account Creation</b></a>
+>>>>>>> 86084c2152cd03d4b07b486451f43caa292fc872:table.php
 		</li>
 	</ul>
-
-	<style>
-		.searchBar {
-			text-align: left;
-			margin-top: 20px;
-			margin-bottom: 10px;
-			border-color: #ff0000;
-		}
-		.searchBar {
-			border-color: #ff0000;
-		}
-	</style>
+	<h1>Home</h1>
 
 	<input class="searchBar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a course (e.g., ECON 0110)..." title="Type in a name">
-
-	<style>
-		.table {
-			border-color: #003c71;
-		}
-	</style>
 
 	<table id="userData" class="table table-bordered table-striped">
 		<thead>
@@ -66,7 +53,26 @@
 				<td>brad_pitt@brown.edu</td>
 			</tr>
 		</tbody>
-	</table>
+		<?php
+		$conn = mysql_connect("localhost", "root", "", "company");
+		if ($conn->connect_error) {
+			die("Connection failed:". $conn->connect_error);
+		}
+		$sql = "SELECT Name, Courses, Email from profiles";
+		$result = $conn->query($sql);
+		if ($result-> num_rows > 0) {
+			while($row = $result->fetch_assoc()) {
+				echo "<tr><td>". $row["#"] ."</td><td>". $row["1"]. "</td><td>".
+				$row["2"] ."</td><td>". $row["3"] ."</td></tr>";
+			}
+			echo "</table>";
+		}
+		else{
+			echo "0 result";
+		}
+		$conn->close();
+		?>
+</table>
 	<script>
 		function myFunction() {
 			var input, filter, table, tr, td, i, txtValue;
