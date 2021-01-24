@@ -18,20 +18,22 @@
 	</ul>
 
 	<style>
+		.wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 		.searchBar {
 			text-align: left;
 			margin-top: 20px;
 			margin-bottom: 10px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			border-width: 3px;
 			border-color: #00b398;
 		}
 	</style>
-
-	<input class="searchBar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a course (e.g., ECON 0110)..." title="Type in a name">
-
+	<div class="wrapper">
+		<input class="searchBar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a course (e.g., ECON 0110)..." title="Type in a name">
+	</div>
 	<style>
 		.table {
 			border-color: #003c71;
